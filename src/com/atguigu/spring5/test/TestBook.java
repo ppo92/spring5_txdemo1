@@ -10,6 +10,10 @@ import org.springframework.context.support.GenericApplicationContext;
 
 public class TestBook {
 
+    /**
+     * 执行这个测试前要注释掉TxConfig，否则会报错：
+     * expected single matching bean but found 2: transactionManager,getDataSourceTransactionManager
+     */
     @Test
     public void testAccount1() {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean1.xml");
